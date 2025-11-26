@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36705.20 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Konyvtar_App", "WPF_Konyvtar_App\WPF_Konyvtar_App.csproj", "{F6ED2C13-3BDD-4930-9A2C-56FD6E7274F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6ED2C13-3BDD-4930-9A2C-56FD6E7274F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6ED2C13-3BDD-4930-9A2C-56FD6E7274F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6ED2C13-3BDD-4930-9A2C-56FD6E7274F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6ED2C13-3BDD-4930-9A2C-56FD6E7274F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC8CC365-B5EF-43CE-8F61-7DCD2B6E65FC}
+	EndGlobalSection
+EndGlobal

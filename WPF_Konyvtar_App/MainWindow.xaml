@@ -1,0 +1,116 @@
+﻿<Window x:Class="WPF_Konyvtar_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Konyvtar_App"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanResize"
+        mc:Ignorable="d"
+        Title="Könyvtár App" Height="600" Width="900" BorderBrush="LightGray" BorderThickness="2">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <!-- Keresés és műfaj-szűrő -->
+        <StackPanel Orientation="Horizontal" 
+                    Grid.Row="0" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2" 
+                    Margin="0,0,0,15">
+            <TextBlock VerticalAlignment="Center" 
+                       Text="Keresés cím alapján:" 
+                       Margin="0,0,8,0" />
+            <TextBox x:Name="txtSearch" 
+                     Width="220" 
+                     Height="20"
+                     VerticalAlignment="Center" />
+
+
+            <TextBlock VerticalAlignment="Center" 
+                       Text=" Műfaj:" 
+                       Margin="12,0,8,0" />
+            <ComboBox x:Name="cbGenreFilter" 
+                      Width="180" 
+                      VerticalAlignment="Center">
+                <ComboBoxItem>Mind</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+
+        <!-- Bal oldali vezérlők: könyv hozzáadása / módosítása -->
+        <GroupBox Header="Könyv kezelése" Grid.Row="1" Grid.Column="0" Padding="10">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <TextBlock Width="70" 
+                               VerticalAlignment="Center">
+                        Cím:</TextBlock>
+                    <TextBox x:Name="tbTitle" 
+                             Width="200" 
+                             />
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <TextBlock Width="70" VerticalAlignment="Center">Szerző:</TextBlock>
+                    <TextBox x:Name="tbAuthor" Width="200" />
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <TextBlock Width="70" VerticalAlignment="Center">Kiadás éve:</TextBlock>
+                    <TextBox x:Name="tbYear" Width="200" />
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <TextBlock Width="70" VerticalAlignment="Center">Műfaj:</TextBlock>
+                    <!-- Műfaj ComboBox: a Genres lista lesz az ItemsSource -->
+                    <ComboBox x:Name="cbGenre" Width="200" 
+ />
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <TextBlock Width="auto" VerticalAlignment="Center" Margin="0 0 5 0">Kölcsönözhető:</TextBlock>
+                    <CheckBox x:Name="chkAvailable" VerticalAlignment="Center" />
+                </StackPanel>
+
+
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="btnAdd" Width="80" Height="28" Margin="0 0 10 0">Hozzáadás</Button>
+                        <Button x:Name="btnUpdate" Width="80" Height="28" Margin="0 0 10 0" >Módosítás</Button>
+                        <Button x:Name="btnDelete" Width="80" Height="28" Margin="0 0 10 0" >Törlés</Button>
+                    </StackPanel>
+                    <Button x:Name="btnClear" Width="260" Height="28" HorizontalAlignment="Center" Margin="0 10 10 0">Űrlap törlése és az adatok betöltése</Button>
+                </StackPanel>
+                
+                
+
+
+                
+            </StackPanel>
+        </GroupBox>
+
+
+        <!-- Jobb oldali DataGrid -->
+        <DataGrid x:Name="BooksDataGrid" 
+                  Grid.Row="1" 
+                  Grid.Column="1" 
+                  AutoGenerateColumns="False" 
+                  SelectionMode="Single" 
+                  CanUserAddRows="False" 
+                  IsReadOnly="False" 
+                  Margin="8,0,0,0"/>
+
+
+    </Grid>
+</Window>
